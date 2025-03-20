@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Redesign Portfolio</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Fixed Navigation -->
+    <header>
+      <nav>
+        <a href="#intro">Intro</a>
+        <a href="#usability">Usability Analysis</a>
+        <a href="#process">Redesign Process</a>
+        <a href="#style-guide">Style Guide</a>
+        <a href="#mockup">Mockup</a>
+        <a href="#final-outcome">Final Outcome</a>
+        <a href="#fulfilled">How Problems Were Solved</a>
+        <a href="#reflections">Reflections</a>
+      </nav>
+    </header>
+
+    <!-- Intro Section -->
+    <section id="intro" class="slide">
+      <div class="container fade-in">
+        <h2>Introduction & Project Goals</h2>
+        <p>
+          As one of the few kosher restaurants in my hometown of Riverdale, New
+          York, Kai Fan has long been a go-to option for delivery. I chose to
+          redesign Kai Fan’s website to address its outdated design, confusing
+          navigation, and poor visual hierarchy, all of which created
+          significant barriers to an enjoyable user experience
+        </p>
+        <p>
+          My overarching goal was to build a modern, responsive, and visually
+          appealing interface that prioritizes user needs. By streamlining
+          navigation and ensuring clarity in design, I aimed to help customers
+          seamlessly find essential info—like hours, location, and menu
+          options—while reflecting Kai Fan’s brand identity.
+        </p>
+        <p>
+          Go check it out for yourself!
+          <a
+            href="https://www.kaifancuisine.com/"
+            target="_blank"
+            rel="noopener"
+          >
+            https://www.kaifancuisine.com/
+          </a>
+        </p>
+        <!-- Kai Fan Website Screenshot -->
+        <img
+          src="images/kai_fan_og.png"
+          alt="Screenshot of Kai Fan website"
+          class="original_image"
+        />
+      </div>
+    </section>
+
+    <section id="usability" class="slide">
+      <div class="container fade-in">
+        <h2>Usability Analysis</h2>
+        <p>
+          Using five core criteria—Efficiency, Memorability, Learnability,
+          Conceptual Model, and Accessibility—I analyzed how the original Kai
+          Fan website impacts user interactions and where it falls short. Expand
+          each section below to see the specific issues discovered.
+        </p>
+
+        <div class="accordion">
+          <!-- EFFICIENCY -->
+          <div class="accordion-item">
+            <button class="accordion-header">
+              Efficiency: Minimizing Wasted Steps & Friction
+            </button>
+            <div class="accordion-content">
+              <ul>
+                <li>
+                  The “A Destination” section tons of space with only two lines
+                  of text, wasting valuable screen real estate while also
+                  looking visually unnapealing
+                </li>
+                <li>
+                  Multiple "Order Online" buttons create confusion about which
+                  one to use.
+                </li>
+                <li>
+                  The site lacks a built-in menu page—users must click “Order
+                  Online,” leading to an external site and adding friction for
+                  simple menu browsing.
+                </li>
+                <li>
+                  Key info like business hours and location is buried at the
+                  bottom, forcing users to scroll and search for basic details.
+                </li>
+                <li>
+                  On mobile, unoptimized images slow loading times, further
+                  reducing efficiency.
+                </li>
+                <li>
+                  Repetitive promotional text (“All you can eat sushi is back…”)
+                  clutters the homepage, making it harder to find important
+                  information.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- MEMORABILITY -->
+          <div class="accordion-item">
+            <button class="accordion-header">
+              Memorability: Helping Returning Users Recall the Site
+            </button>
+            <div class="accordion-content">
+              <ul>
+                <li>
+                  Text-heavy promotions precede essential details (like hours,
+                  location, and food options), making users repeatedly hunt for
+                  key info.
+                </li>
+                <li>
+                  Large image captions (“FRESH INGREDIENTS,” “MASTER CHEF”)
+                  appear interactive but aren't clickable, creating confusion on
+                  subsequent visits. They don't add anything important, yet make
+                  the site confusing.
+                </li>
+                <li>
+                  A lack of a distinctive color scheme or typography makes it
+                  difficult for returning users to recognize Kai Fan’s site from
+                  others.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- LEARNABILITY -->
+          <div class="accordion-item">
+            <button class="accordion-header">
+              Learnability: Quick Onboarding for New Visitors
+            </button>
+            <div class="accordion-content">
+              <ul>
+                <li>
+                  The “Order Online” button is not very noticeable, it blends
+                  into the background due to a thin white outline that contrasts
+                  poorly. Users may not recognize it as a call to action button.
+                </li>
+                <li>
+                  No hover effects or animations guide a first-time user’s
+                  attention, missing a key opportunity for to aid site learning.
+                </li>
+                <li>
+                  The prominent “All you can eat sushi” banner competes visually
+                  with key navigation elements but doesn’t clarify how to take
+                  advantage of the deal in-person or online.
+                </li>
+                <li>
+                  Outdated visual hierarchy leads to multiple large text
+                  elements vying for attention, leaving newcomers unsure where
+                  to look first.
+                </li>
+                <li>
+                  Users expecting a "Menu" page may not realize that the "Order
+                  Now" button is where the menu is found. This slows down a
+                  newcomer looking to learn the site structure.
+                </li>
+                <li>
+                  No clear color-coding or guidance leaves new users to figure
+                  out the site on their own.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- CONCEPTUAL MODEL -->
+          <div class="accordion-item">
+            <button class="accordion-header">
+              Conceptual Model: Aligning Site Flow with User Expectations
+            </button>
+            <div class="accordion-content">
+              <ul>
+                <li>
+                  The site funnels menu browsing into an external ordering
+                  system, breaking users’ expectations of viewing a menu
+                  in-page. Menu and ordering should be front and center.
+                </li>
+                <li>
+                  Large promotions precede basic context, forcing users to
+                  scroll past slogans and images to find essential restaurant
+                  details.
+                </li>
+                <li>
+                  Static or misleading elements ( “CRAFTED IN THE KITCHEN”) look
+                  clickable but lead nowhere, confusing the mental model of how
+                  the site should work.
+                </li>
+                <li>
+                  The hidden main menu deviates from standard restaurant sites,
+                  potentially causing users to miss or misunderstand the
+                  available pages.
+                </li>
+                <li>
+                  Irrelevant paragraphs and unappetizing pictures further
+                  distort the intended mental model of a welcoming, informative
+                  restaurant page.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ACCESSIBILITY -->
+          <div class="accordion-item">
+            <button class="accordion-header">
+              Accessibility: Creating an Inclusive Experience
+            </button>
+            <div class="accordion-content">
+              <ul>
+                <li>
+                  Contrast issues: White or light-colored text over background
+                  images fails WCAG guidelines, making text hard to read for
+                  low-vision users.
+                </li>
+                <li>
+                  Redundant links and missing alternative text on images impair
+                  screen reader navigation and comprehension.
+                </li>
+                <li>
+                  Although some ARIA titles are present, the overall site
+                  structure lacks consistent labeling for assistive
+                  technologies.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Redesign Process Section -->
+    <section id="process" class="slide">
+      <div class="container fade-in">
+        <h2>Visual Redesign Process</h2>
+        <p>
+          I structured my redesign around four key stages: establishing a style
+          guide, creating detailed mockups for multiple breakpoints, coding the
+          layout, and testing for usability and accessibility.
+        </p>
+        <img
+          src="images/Design_process.png"
+          alt="Redesign Process Flow"
+          class="design_process_image"
+        />
+        <p>
+          This iterative approach helped ensure that each design decision was
+          validated through user feedback and testing. By the end, I had a
+          cohesive redesign that addressed the major pain points identified
+          during the initial analysis.
+        </p>
+      </div>
+    </section>
+
+    <!-- Style Guide Section -->
+    <section id="style-guide" class="slide">
+      <div class="container fade-in">
+        <h2>Style Guide</h2>
+        <p>
+          The redesign relies on a color palette, pairing teal with dark grey
+          and white. Roboto, Open Sans and Raleway were primarily used for
+          texts. Buttons, links, and hover states follow consistent design
+          rules, making interactions predictable and coherent.
+        </p>
+        <img
+          src="images/style_guide.png"
+          alt="Style Guide"
+          class="placeholder-image"
+        />
+      </div>
+    </section>
+
+    <section id="mockup" class="slide">
+      <div class="container fade-in">
+        <h2>Mockups</h2>
+        <p>
+          I produced high-fidelity mockups for mobile, tablet, and desktop. Each
+          design variation uses consistent elements—like the navigation bar and
+          color scheme—but reflows them to fit the available screen space.
+        </p>
+        <p>
+          The mockup featured intuitive, responsive layouts with reusable
+          components, consistent visual cues, clear transitions across screen
+          sizes, and accommodations for diverse user actions.
+        </p>
+
+        <p class="notes">
+          This primary mockup presents the overall design, highlighting key
+          responsive behaviors, interactive features, and the visual hierarchy
+          that guided the final outcome.
+        </p>
+
+        <!-- Centered Button to open modal -->
+        <div class="view-btn-container">
+          <button id="viewMockupBtn" class="view-btn">View Main Mockup</button>
+        </div>
+
+        <!-- Modal -->
+        <div id="mockupModal" class="modal">
+          <!-- Close button (optional) -->
+          <span class="close">&times;</span>
+
+          <!-- Modal Image -->
+          <img
+            class="modal-content"
+            id="mockupImg"
+            src="images/main_mockup.png"
+            alt="Main Mockup with Detailed Notes"
+          />
+
+          <!-- Caption -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Additional Mockups Slide -->
+    <section id="mockup-continued" class="slide">
+      <div class="container fade-in">
+        <h2>Mockups (continued)</h2>
+        <p>
+          The following images showcase additional views of the redesigned site
+          across different devices and states.
+        </p>
+
+        <div class="mockup-gallery">
+          <img
+            src="images/iphone_mockup.png"
+            alt="iPhone Mockup"
+            class="gallery-image-big"
+          />
+          <img
+            src="images/computer_mockup.png"
+            alt="Computer Mockup"
+            class="gallery-image-big"
+          />
+          <img
+            src="images/menu_mockup.png"
+            alt="Menu Mockup"
+            class="gallery-image-big"
+          />
+          <img
+            src="images/gallery_mockup.png"
+            alt="Additional Mockups Gallery"
+            class="gallery-image"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Final Outcome Slide -->
+    <section id="final-outcome" class="slide">
+      <div class="container fade-in">
+        <h2>Final Outcome</h2>
+        <p>
+          The end result is a website that feels modern, welcoming, and
+          intuitive. By integrating consistent design elements and prioritizing
+          accessible, user-centric features, the redesigned Kai Fan site now
+          invites users to explore the menu, check operating hours, and place
+          orders without friction.
+        </p>
+        <p>
+          Go check it out for yourself!
+          <a
+            href="https://www.kaifancuisine.com/"
+            target="_blank"
+            rel="noopener"
+          >
+            Visit Kai Fan
+          </a>
+        </p>
+        <div class="screenshot-gallery">
+          <div class="screenshot-item">
+            <img
+              src="images/res5.png"
+              alt="Screenshot res1"
+              class="placeholder-image"
+            />
+            <p class="screenshot-caption">
+              Main page with first gallery picture
+            </p>
+          </div>
+          <div class="screenshot-item">
+            <img
+              src="images/res2.png"
+              alt="Screenshot res2"
+              class="placeholder-image"
+            />
+            <p class="screenshot-caption">
+              Main page with another gallery picture
+            </p>
+          </div>
+          <div class="screenshot-item">
+            <img
+              src="images/res3.png"
+              alt="Screenshot res3"
+              class="placeholder-image"
+            />
+            <p class="screenshot-caption">The "A Destination" page</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final Outcome (continued) Slide -->
+    <section id="final-outcome-continued" class="slide">
+      <div class="container fade-in">
+        <h2>Final Outcome (continued)</h2>
+        <p>
+          The new site is accessbile in all languages, font sizes and screen
+          types. It's learning and easy to use, where every component has a
+          purpose.
+        </p>
+        <div class="screenshot-gallery">
+          <div class="screenshot-item">
+            <img
+              src="images/res4.png"
+              alt="Screenshot res4"
+              class="placeholder-image"
+            />
+            <p class="screenshot-caption">Site with menu modal</p>
+          </div>
+          <div class="screenshot-item">
+            <img
+              src="images/res1.png"
+              alt="Screenshot res5"
+              class="placeholder-image"
+            />
+            <p class="screenshot-caption">
+              Menu with navigation button hovered
+            </p>
+          </div>
+          <div class="screenshot-item">
+            <img
+              src="images/res6.png"
+              alt="Screenshot res6"
+              class="placeholder-image"
+            />
+            <p class="screenshot-caption">Bottom and contact page</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final Outcome (continued 2) Slide -->
+    <section id="final-outcome-continued2" class="slide">
+      <div class="container fade-in">
+        <h2>Final Outcome (continued)</h2>
+        <div class="screenshot-gallery">
+          <div class="screenshot-item">
+            <img
+              src="images/ref7.png"
+              alt="Screenshot ref7"
+              class="placeholder-image"
+            />
+            <p class="screenshot-caption">Site in another language</p>
+          </div>
+          <div class="screenshot-item">
+            <img
+              src="images/ref8.png"
+              alt="Screenshot ref8"
+              class="placeholder-image"
+            />
+            <p class="screenshot-caption">
+              Partial site photo on iphone screen
+            </p>
+          </div>
+          <div class="screenshot-item">
+            <img
+              src="images/ref9.png"
+              alt="Screenshot ref9"
+              class="placeholder-image"
+            />
+            <p class="screenshot-caption">Site with adjusted large text size</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How Problems Were Solved Section -->
+    <section id="fulfilled" class="slide">
+      <div class="container fade-in">
+        <h2>How Problems Were Solved</h2>
+        <p>
+          I implemented improvements to address the key issues identified in our
+          analysis:
+        </p>
+        <ul>
+          <li>
+            <strong>Efficiency:</strong>
+            <span
+              >Redundant elements were eliminated and the navigation streamlined
+              so that essential details like operating hours and location are
+              immediately visible. Unnecessary content was removed to reduce
+              friction.</span
+            >
+          </li>
+          <li>
+            <strong>Learnability:</strong>
+            <span
+              >Micro-interactions, hover effects, and clear visual cues were
+              introduced. Updated labels and guidance help new users quickly
+              understand how to interact with the site.</span
+            >
+          </li>
+          <li>
+            <strong>Memorability:</strong>
+            <span
+              >A distinctive color palette and updated typography were adopted.
+              A persistent, intuitive navigation bar ensures returning visitors
+              can easily recognize and recall the brand.</span
+            >
+          </li>
+          <li>
+            <strong>Conceptual Model:</strong>
+            <span
+              >Content was reorganized to match user expectations. Misleading or
+              static elements were removed to create a logical, intuitive flow
+              throughout the site.</span
+            >
+          </li>
+          <li>
+            <strong>Accessibility:</strong>
+            <span
+              >Color contrast was improved, descriptive alt text was added, and
+              interactive elements were optimized to meet WCAG guidelines,
+              making the site more inclusive for users with disabilities.</span
+            >
+          </li>
+        </ul>
+        <p>
+          These enhancements transformed the site into a user-friendly and
+          effective digital experience.
+        </p>
+      </div>
+    </section>
+
+    <!-- Reflections Section -->
+    <section id="reflections" class="slide">
+      <div class="container fade-in">
+        <h2>Reflections</h2>
+        <p>
+          This project was a fun excersize that taught me several critical
+          lessons:
+        </p>
+        <ul>
+          <li>
+            <strong>Attention to Detail:</strong>
+            <span
+              >Subtle choices like precise color contrasts and
+              micro-interactions can make a huge difference.</span
+            >
+          </li>
+          <li>
+            <strong>User Focused Design:</strong>
+            <span
+              >Aligning design decisions with real user needs and mental models
+              is very important.</span
+            >
+          </li>
+          <li>
+            <strong>Balance of Aesthetics and Functionality:</strong>
+            <span
+              >The project highlighted the necessity of creating a visually
+              appealing interface without sacrificing usability or
+              accessibility.</span
+            >
+          </li>
+        </ul>
+        <p>
+          This was my first site redesign and I enjoyed looking at a site,
+          assessing its strengths and weaknesses, and then fixing it myself!
+        </p>
+      </div>
+      <p>Case Study by Efram Geller</p>
+    </section>
+
+    <!-- JavaScript for scroll snapping, fade-in sections, and accordion behavior -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Fade-in Intersection Observer
+        const fadeEls = document.querySelectorAll(".fade-in");
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+              }
+            });
+          },
+          { threshold: 0.2 }
+        );
+        fadeEls.forEach((el) => observer.observe(el));
+
+        // Accordion
+        const accordionHeaders = document.querySelectorAll(".accordion-header");
+        accordionHeaders.forEach((header) => {
+          header.addEventListener("click", () => {
+            const activeItem =
+              header.parentElement.classList.contains("active");
+            document.querySelectorAll(".accordion-item").forEach((item) => {
+              item.classList.remove("active");
+            });
+            if (!activeItem) {
+              header.parentElement.classList.add("active");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById("mockupModal");
+    const openBtn = document.getElementById("viewMockupBtn");
+    const closeBtn = document.querySelector(".close");
+    const modalImage = document.getElementById("mockupImg");
+
+    // Open modal when button is clicked
+    openBtn.onclick = function () {
+      modal.style.display = "block";
+    };
+
+    // Close modal when 'X' is clicked
+    closeBtn.onclick = function () {
+      modal.style.display = "none";
+    };
+
+    // If user clicks outside the image (anywhere on the modal background), close the modal
+    modal.addEventListener("click", function () {
+      modal.style.display = "none";
+    });
+
+    // Prevent modal from closing if user clicks on the image itself
+    modalImage.addEventListener("click", function (event) {
+      event.stopPropagation();
+    });
+  });
+</script>

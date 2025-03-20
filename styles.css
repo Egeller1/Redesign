@@ -1,0 +1,333 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  /* Full-page scroll snapping */
+  height: 100%;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  font-family: "Lato", sans-serif;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* More Visible Gradient */
+body {
+  background: linear-gradient(135deg, #b2f1ea 0%, #ffd8ca 100%);
+}
+
+/* Navigation */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background: linear-gradient(135deg, #009688, #ff6f61);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  font-family: "Montserrat", sans-serif;
+}
+nav a:hover {
+  color: #fafafa;
+}
+
+/* Slide Sections */
+.slide {
+  scroll-snap-align: start;
+  width: 100%;
+  height: 100vh; /* Each section is a full screen "slide" */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+  /* So content isn't hidden behind the nav bar */
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Container to constrain content width */
+.container {
+  max-width: 1000px;
+  width: 100%;
+}
+
+/* Headings */
+h2,
+h3,
+h4 {
+  font-family: "Montserrat", sans-serif;
+  color: #222;
+  margin-bottom: 1rem;
+}
+h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+h4 {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+/* Paragraphs */
+p {
+  margin-bottom: 1.2rem;
+  font-size: 1.1rem;
+}
+
+/* Fade-In Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Placeholder Images */
+.placeholder-image {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  border-radius: 6px;
+}
+.design_process_image {
+  width: 50%;
+  display: block;
+  margin: 20px auto;
+  border-radius: 6px;
+
+  height: auto;
+}
+
+.original_image {
+  display: block;
+  margin: 20px auto;
+  /* Constrain the image to 50% of its container or 600px, whichever is smaller */
+  max-width: 600px;
+  width: 50%;
+  height: auto; /* Preserves aspect ratio */
+  border-radius: 6px;
+}
+
+/* Galleries */
+.screenshot-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.screenshot-item {
+  text-align: center;
+}
+
+.placeholder-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  border-radius: 6px;
+}
+
+.screenshot-caption {
+  margin-top: 8px;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Main Mockup Container */
+.main-mockup {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Highlighted Main Mockup Image */
+.highlighted-image {
+  max-width: 900px;
+  width: 30%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+/* Center the "View Main Mockup" button */
+.view-btn-container {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.view-btn {
+  display: inline-block;
+  background: #009688;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.view-btn:hover {
+  background: #00796b;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 220%;
+  background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+  overflow: auto; /* If content is taller than screen, allow scrolling */
+}
+
+/* Close Button (X) */
+.close {
+  position: absolute;
+  top: 40px;
+  right: 60px;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Modal Image */
+.modal-content {
+  display: block;
+  margin: 60px auto;
+  max-width: 90%;
+  max-height: 90vh; /* Ensures large images fit on screen */
+  height: auto;
+  border-radius: 6px;
+}
+
+/* Caption below image */
+.modal-caption {
+  color: #fff;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  max-width: 90%;
+  margin: 1rem auto;
+}
+
+/* Descriptive Notes for Main Mockup */
+.notes {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #444;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+/* Existing Gallery Styles (if not already defined) */
+.mockup-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.gallery-image {
+  width: 60%;
+
+  height: auto;
+  border-radius: 6px;
+}
+.gallery-image-big {
+  height: auto;
+  width: 60%;
+
+  border-radius: 6px;
+}
+
+/* Accordion */
+.accordion {
+  width: 100%;
+}
+.accordion-item {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin: 0.5rem 0;
+  overflow: hidden;
+  background: #fff;
+}
+.accordion-header {
+  background: #009688;
+  color: #fff;
+  padding: 1rem;
+  width: 100%;
+  text-align: left;
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-family: "Montserrat", sans-serif;
+}
+.accordion-header:hover {
+  background: #00796b;
+}
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 1rem;
+}
+.accordion-item.active .accordion-content {
+  padding: 1rem;
+  max-height: 500px; /* Enough for your content; adjust as needed */
+}
+.accordion-content ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  .slide {
+    padding: 0 20px;
+  }
+  nav a {
+    margin: 0 0.5rem;
+    font-size: 0.85rem;
+  }
+}
